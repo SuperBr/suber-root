@@ -35,7 +35,7 @@
     </typeAliases>
 
     <typeHandlers>
-        <typeHandler handler="com.day_1.typeHandle.MyTypeHandle" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <typeHandler handler="com.day_1.typeHandle.MyTypeHandle" javaType="com.day_1.model.ex.PassWd" />
     </typeHandlers>
 
 

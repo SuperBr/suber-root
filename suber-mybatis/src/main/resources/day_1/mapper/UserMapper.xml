@@ -9,7 +9,7 @@
     <resultMap id="UserBase" type="com.day_1.model.User">
         <id property="id" column="id" jdbcType="BIGINT"></id>
         <result property="name" column="name" jdbcType="VARCHAR"/>
-        <result property="passwd" column="passwd" jdbcType="VARCHAR" typeHandler="com.day_1.typeHandle.MyTypeHandle"/>
+        <result property="passWd" column="passwd" typeHandler="com.day_1.typeHandle.MyTypeHandle"/>
         <result property="age" column="age" jdbcType="INTEGER"/>
         <result property="birthDay" column="birthDay" jdbcType="TIMESTAMP"/>
         <result property="deleted" column="deleted" jdbcType="BIT"/>
@@ -25,7 +25,7 @@
 
     <insert id="insert">
      insert into user(id, name, passwd, age,deleted, flag,birthDay)
-               values(#{id}, #{name}, #{passwd}, #{age}, #{deleted},#{flag},#{birthDay} )
+               values(#{id}, #{name}, #{passWd}, #{age}, #{deleted},#{flag},#{birthDay} )
     </insert>
    <!-- &lt;!&ndash; 1. id （必须配置）
       id是命名空间中的唯一标识符，可被用来代表这条语句。

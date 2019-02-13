@@ -2,6 +2,7 @@ package com.day_1;
 
 import com.day_1.dao.UserDao;
 import com.day_1.model.User;
+import com.day_1.model.ex.PassWd;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -25,7 +26,7 @@ public class Day_1_main {
         UserDao mapper = session.getMapper(UserDao.class);
 
         User user = new User();
-        user.setPasswd(Integer.valueOf(new Random().nextInt(100000)).toString());
+        user.setPassWd((Integer.valueOf(new Random().nextInt(100000)).toString()));
 
         mapper.insert(user);
 

@@ -1,6 +1,7 @@
 package com.day_1.model;
 
 import com.annotation.SQL;
+import com.day_1.model.ex.PassWd;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -15,7 +16,7 @@ public class User {
 
     private Long id;
 
-    private String passwd;
+    private PassWd passWd;
 
     private String name;
 
@@ -36,12 +37,12 @@ public class User {
         return this;
     }
 
-    public String getPasswd() {
-        return passwd;
+    public String getPassWd() {
+        return passWd.getPassWd();
     }
 
-    public User setPasswd(String passwd) {
-        this.passwd = passwd;
+    public User setPassWd(String passWd) {
+       this.passWd=new PassWd().setPassWd(passWd);
         return this;
     }
 
@@ -94,7 +95,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", passwd='" + passwd + '\'' +
+                ", passWd=" + passWd +
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", birthDay=" + birthDay +
