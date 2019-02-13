@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>suber</groupId>
+    <artifactId>suber-root</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>suber-mybatis</module>
+        <module>suber-spring</module>
+        <module>suber-dubbo</module>
+        <module>suber-mysql</module>
+        <module>suber-jvm</module>
+        <module>suber-netty</module>
+        <module>suber-tomcat</module>
+        <module>suber-standSpringmybatis</module>
+        <module>suber-common</module>
+    </modules>
+
+
+</project>
