@@ -16,7 +16,7 @@ public class User {
 
     private Long id;
 
-    private PassWd passWd;
+    private String passWd;
 
     private String name;
 
@@ -37,17 +37,12 @@ public class User {
         return this;
     }
 
-    public PassWd getPassWd() {
+    public String getPassWd() {
         return passWd;
     }
 
-    public User setPassWd(PassWd passWd) {
-        this.passWd = passWd;
-        return this;
-    }
-
     public User setPassWd(String passWd) {
-        this.passWd = new PassWd(passWd);
+        this.passWd = passWd;
         return this;
     }
 

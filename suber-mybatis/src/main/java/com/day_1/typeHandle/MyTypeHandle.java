@@ -25,10 +25,12 @@ public class MyTypeHandle extends BaseTypeHandler<PassWd> {
     }
 
     public PassWd getNullableResult(ResultSet rs, int columnIndex) throws SQLException {
+        rs.getString(columnIndex);
         return PassWd.defaultV;
     }
 
     public PassWd getNullableResult(CallableStatement cs, int columnIndex) throws SQLException {
+        cs.getString(columnIndex);
         return PassWd.defaultV;
     }
 }
