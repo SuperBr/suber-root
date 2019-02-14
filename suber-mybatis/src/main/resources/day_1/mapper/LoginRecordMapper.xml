@@ -7,6 +7,9 @@
 <mapper namespace="com.day_1.dao.LoginRecordDao">
 
   <resultMap id="loginRecordDtoMap" type="com.day_1.model.ex.LoginRecordDto">
+      <constructor >
+          <idArg column="id" javaType="java.lang.Long"></idArg>
+      </constructor>
       <result property="id" column="id"/>
       <!--一对一-->
      <!-- <association property="user" column="user_id"  select="com.day_1.dao.UserDao.selectBtId"/>-->
@@ -25,8 +28,9 @@
         <result property="birthDay" column="birthDay" jdbcType="TIMESTAMP"/>
         <result property="deleted" column="deleted" jdbcType="BIT"/>
         <result property="flag" column="flag" jdbcType="SMALLINT"/>
-
     </resultMap>
+
+
     
     
     <select id="selectAll" resultMap="loginRecordDtoMap">

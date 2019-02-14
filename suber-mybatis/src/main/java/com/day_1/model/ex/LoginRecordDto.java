@@ -16,32 +16,11 @@ public class LoginRecordDto implements Serializable {
 
     private List<User> users;
 
-
-    public List<User> getUsers() {
-        return users;
-    }
-
-    public LoginRecordDto setUsers(List<User> users) {
-        this.users = users;
-        return this;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public LoginRecordDto setId(Long id) {
+    public LoginRecordDto(Long id) {
         this.id = id;
-        return this;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public LoginRecordDto setUser(User user) {
-        this.user = user;
-        return this;
+    public LoginRecordDto() {
     }
 
     @Override

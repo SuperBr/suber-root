@@ -12,4 +12,5 @@ import java.util.List;
 public interface LoginRecordDao {
 
     List<LoginRecordDto> selectAll();
+
 }

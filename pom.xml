@@ -18,7 +18,21 @@
         <module>suber-tomcat</module>
         <module>suber-standSpringmybatis</module>
         <module>suber-common</module>
+        <module>suber-base</module>
     </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                 <configuration>
+                     <target>1.8</target>
+                     <source>1.8</source>
+                 </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>

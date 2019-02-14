@@ -9,7 +9,7 @@ import java.util.Date;
  * @author wangyongchao
  * @date 2019/2/14  10:52
  */
-@SQL("create table login_record(id int8 not null auto_increment,user_id int8 not null,login_date timestamp,primary key(id))")
+@SQL("create table login_record(id int8 not null auto_increment,user_id int8 not null,login_date timestamp primary key(id))")
 public class LoginRecord implements Serializable {
 
     private Long id;
