@@ -19,6 +19,8 @@
         <module>suber-standSpringmybatis</module>
         <module>suber-common</module>
         <module>suber-base</module>
+        <module>suber-redis</module>
+        <module>suber-zookeeper</module>
     </modules>
 
     <build>
