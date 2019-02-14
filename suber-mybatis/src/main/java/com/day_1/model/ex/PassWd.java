@@ -15,8 +15,22 @@ public class PassWd {
         return passWd;
     }
 
+    public PassWd(String passWd) {
+        this.passWd = passWd;
+    }
+
+    public PassWd() {
+    }
+
     public PassWd setPassWd(String passWd) {
         this.passWd = passWd;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "PassWd{" +
+                "passWd='" + passWd + '\'' +
+                '}';
     }
 }

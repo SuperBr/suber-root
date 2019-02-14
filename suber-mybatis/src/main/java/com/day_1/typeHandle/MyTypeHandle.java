@@ -20,6 +20,7 @@ public class MyTypeHandle extends BaseTypeHandler<PassWd> {
     }
 
     public PassWd getNullableResult(ResultSet rs, String columnName) throws SQLException {
+        rs.getString(columnName);
         return PassWd.defaultV;
     }
 

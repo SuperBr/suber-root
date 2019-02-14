@@ -37,12 +37,17 @@ public class User {
         return this;
     }
 
-    public String getPassWd() {
-        return passWd.getPassWd();
+    public PassWd getPassWd() {
+        return passWd;
+    }
+
+    public User setPassWd(PassWd passWd) {
+        this.passWd = passWd;
+        return this;
     }
 
     public User setPassWd(String passWd) {
-       this.passWd=new PassWd().setPassWd(passWd);
+        this.passWd = new PassWd(passWd);
         return this;
     }
 
