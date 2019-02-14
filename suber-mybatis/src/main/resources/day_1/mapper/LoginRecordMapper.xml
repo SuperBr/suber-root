@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- mapper 为根元素节点， 一个namespace对应一个dao -->
+<mapper namespace="com.day_1.dao.LoginRecordDao">
+
+  <resultMap id="loginRecordDtoMap" type="com.day_1.model.ex.LoginRecordDto">
+      <result property="id" column="id"/>
+      <!--一对一-->
+     <!-- <association property="user" column="user_id"  select="com.day_1.dao.UserDao.selectBtId"/>-->
+     <!-- <association property="user" column="user_id"  resultMap="UserBase"/>-->
+      <!--一对多-->
+      <collection property="users" column="user_id" select="com.day_1.dao.UserDao.selectAll">
+
+      </collection>
+  </resultMap>
+
+    <resultMap id="UserBase" type="com.day_1.model.User">
+        <id property="id" column="id" jdbcType="BIGINT"></id>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="passWd" column="passwd" jdbcType="VARCHAR" javaType="java.lang.String" typeHandler="com.day_1.typeHandle.MyString2StringTypeHandle"/>
+        <result property="age" column="age" jdbcType="INTEGER"/>
+        <result property="birthDay" column="birthDay" jdbcType="TIMESTAMP"/>
+        <result property="deleted" column="deleted" jdbcType="BIT"/>
+        <result property="flag" column="flag" jdbcType="SMALLINT"/>
+
+    </resultMap>
+    
+    
+    <select id="selectAll" resultMap="loginRecordDtoMap">
+     SELECT  * from login_record
+    </select>
+</mapper>

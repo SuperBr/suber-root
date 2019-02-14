@@ -1,5 +1,6 @@
 package com.day_1;
 
+import com.day_1.dao.LoginRecordDao;
 import com.day_1.dao.UserDao;
 import com.day_1.model.User;
 import com.day_1.model.ex.PassWd;
@@ -23,7 +24,7 @@ public class Day_1_main {
 
 
         SqlSession session = sqlSessionFactory.openSession();
-        UserDao mapper = session.getMapper(UserDao.class);
+        /*UserDao mapper = session.getMapper(UserDao.class);
 
         User user = new User();
         user.setPassWd((Integer.valueOf(new Random().nextInt(100000)).toString()));
@@ -33,7 +34,12 @@ public class Day_1_main {
         System.out.println(mapper.selectAll());
 
 
-        System.out.println(mapper.selectBtId(5L));
+        System.out.println(mapper.selectBtId(47L));*/
+
+        LoginRecordDao mapper = session.getMapper(LoginRecordDao.class);
+
+
+        System.out.println(mapper.selectAll());
 
         session.commit();
 

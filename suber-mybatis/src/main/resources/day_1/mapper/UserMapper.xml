@@ -6,6 +6,10 @@
 <!-- mapper 为根元素节点， 一个namespace对应一个dao -->
 <mapper namespace="com.day_1.dao.UserDao">
 
+    <cache>
+
+    </cache>
+
     <resultMap id="UserBase" type="com.day_1.model.User">
         <id property="id" column="id" jdbcType="BIGINT"></id>
         <result property="name" column="name" jdbcType="VARCHAR"/>

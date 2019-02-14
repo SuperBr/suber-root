@@ -4,6 +4,7 @@ import com.annotation.SQL;
 import com.day_1.model.ex.PassWd;
 
 import javax.annotation.Resource;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Date;
  */
 
 @SQL("create table user( id int8 auto_increment ,passwd varchar(64) , name varchar(64) ,age int4 ,birthDay timestamp ,deleted BIT ,flag int2  ,primary key (id) );")
-public class User {
+public class User implements Serializable {
 
     private Long id;
 

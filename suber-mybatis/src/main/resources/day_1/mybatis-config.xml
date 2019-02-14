@@ -67,6 +67,7 @@
     <!-- sql映射文件注册 -->
     <mappers>
         <mapper resource="day_1/mapper/UserMapper.xml"></mapper>
+        <mapper resource="day_1/mapper/LoginRecordMapper.xml"></mapper>
       <!--  <mapper class="UserDao"></mapper>-->
     </mappers>
 
