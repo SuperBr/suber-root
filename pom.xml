@@ -21,6 +21,8 @@
         <module>suber-base</module>
         <module>suber-redis</module>
         <module>suber-zookeeper</module>
+        <module>suber-maven-plugin</module>
+        <module>suber-maven</module>
     </modules>
 
     <build>
