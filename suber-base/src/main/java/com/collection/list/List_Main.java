@@ -26,11 +26,26 @@ public class List_Main {
          * grow方法会将当前数组的长度变为原来容量的1.5 倍
          */
         List arrayList = new ArrayList();
+        /**
+         *实现了Queue，Deque：双端队列。
+         *
+         *LinkedList底层使用的双向链表结构
+         */
+        List linkedList = new LinkedList( );
+        /**
+         * 【】在根据索引查找结点时，会有一个小优化，结点在前半段则从头开始遍历，在后半段则从尾开始遍历，这样就保证了只需要遍历最多一半结点就可以找到指定索引的结点。
+         */
+        linkedList.get(1);
 
-        List linkedList = new LinkedList();
-
+        /**
+         * 【Vector是线程安全的】
+         * 【数组实现，可以理解为arrayList的同步版本】
+         */
         List vector = new Vector();
-
+        /**
+         *FILO 先进后出
+         *继承了vector
+         */
         List stack = new Stack();
 
     }
