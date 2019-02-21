@@ -76,7 +76,36 @@
 
 12.BlockingQueue介绍
 
- 作用：
+ 作用：BlockingQueue 实现是线程安全的
+
+   解决如何高效安全“传输”数据的问题。通过这些高效并且线程安全的队列类，为我们快速搭建高质量的多线程程序带来极大的便利
+
+13.List的排序问题
+
+        Object[] a = this.toArray();
+        Arrays.sort(a, (Comparator) c);
+        if (c == null) {
+            sort(a);
+        } else {
+            if (LegacyMergeSort.userRequested)
+                legacyMergeSort(a, c);
+            else
+                TimSort.sort(a, 0, a.length, c, null, 0, 0);
+        }
+
+      legacyMergeSort()：归并排序算法
+
+
+      TimSort.sort()：是结合了合并排序（merge sort）和插入排序（insertion sort）而得出的排序算法，它在现实中有很好的效率
+13: array的排序问题
+
+   public static void sort(int[] a) {
+       DualPivotQuicksort.sort(a, 0, a.length - 1, null, 0, 0);
+   }
+
+  总结一下Arrays.sort()方法，如果数组长度大于等于286且连续性好的话，就用归并排序，如果大于等于286且连续性不好的话就用双轴快速排序。
+  如果长度小于286且大于等于47的话就用双轴快速排序，如果长度小于47的话就用插入排序。真是有够绕的~
+
 
 
 

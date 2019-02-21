@@ -48,5 +48,28 @@ public class List_Main {
          */
         List stack = new Stack();
 
+
+        ArrayList arrayList1 = new ArrayList();
+
+        LinkedList linkedList1 = new LinkedList();
+
+        linkedList1.sort(new Comparator() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                return 0;
+            }
+        });
+
+        Collections.sort(new ArrayList());
+
+        arrayList.sort(new Comparator() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                return 0;
+            }
+        });
+
+        Arrays.sort(new int[12]);
+
     }
 }

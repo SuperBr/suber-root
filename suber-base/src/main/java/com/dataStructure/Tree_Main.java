@@ -4,7 +4,7 @@ package com.dataStructure;
  * @author wangyongchao
  * @date 2019/2/18  10:14
  */
-public class Data_Main {
+public class Tree_Main {
 
 
 }
