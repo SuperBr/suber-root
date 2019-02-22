@@ -46,7 +46,9 @@ public class List_Main {
          *FILO 先进后出
          *继承了vector
          */
-        List stack = new Stack();
+        Stack stack = new Stack();
+
+        stack.pop();
 
 
         ArrayList arrayList1 = new ArrayList();
