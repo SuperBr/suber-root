@@ -168,14 +168,13 @@ public class Sort_Main {
     public int[] Shell_Sort(int arr[]) {
         int increment = arr.length / 2;
 
-        while (increment > 1) {
+        while (increment >0) {
             for (int a = 0; a < arr.length; a++) {
                 for (int b = a; b < arr.length - increment; b = b + increment) {
-
-                    if (arr[a] > arr[a + increment]) {
-                        int tmp = arr[a];
-                        arr[a + increment] = arr[a];
-                        arr[a] = tmp;
+                    if (arr[b] > arr[b + increment]) {
+                        int tmp = arr[b+increment];
+                        arr[b + increment] = arr[b];
+                        arr[b] = tmp;
                     }
                 }
             }
