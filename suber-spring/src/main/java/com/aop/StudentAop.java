@@ -8,7 +8,7 @@ import org.aspectj.lang.annotation.Aspect;
  * @date 2019/2/27  17:23
  */
 
-@Aspect
+
 public class StudentAop {
 
     public void before() {
