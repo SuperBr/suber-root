@@ -25,6 +25,8 @@ public class Jvm_Test {
      *
      * -XX:+PrintGCTimeStamps、
      * -XX:+PrintGCApplicationStoppedTime
+     * -XX:+PrintCommonLineFlags
+     * -XX:+PrintFlagFinal
      * @param args
      */
     public static void main(String[] args){
