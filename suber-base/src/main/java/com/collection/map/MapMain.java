@@ -1,10 +1,12 @@
 package com.collection.map;
 
+import org.junit.Test;
 import sun.reflect.generics.tree.Tree;
 
 import javax.swing.table.TableCellEditor;
 import java.io.Reader;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 /**
@@ -246,5 +248,45 @@ public class MapMain {
         public int compareTo(Object o) {
             return 0;
         }
+    }
+
+    @Test
+    public void hashTable_Test() {
+        Hashtable hashtable = new Hashtable();
+        //hashtable.put(null, new Object());   NullPointerException
+
+
+       // hashtable.put(new Object(), null); NullPointerException
+
+
+        //hashtable.contains(null); NullPointerException
+
+       // hashtable.containsKey(null);  NullPointerException
+
+    }
+
+
+    @Test
+    public void HashMap_test() {
+
+        HashMap hashMap = new HashMap();
+
+        hashMap.put(null, null);
+
+        hashMap.remove(null);
+
+    }
+
+
+    @Test
+    public void ConcurrentHashMap_Test() {
+        ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap();
+      //  concurrentHashMap.put(null, new Object()); NullPointerException
+
+        // concurrentHashMap.put(new Object(), null);  NullPointerException
+
+       // concurrentHashMap.contains(null);  NullPointerException
+
+
     }
 }
