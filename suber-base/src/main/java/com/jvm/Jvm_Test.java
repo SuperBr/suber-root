@@ -1,5 +1,7 @@
 package com.jvm;
 
+import java.lang.management.GarbageCollectorMXBean;
+import java.lang.management.ManagementFactory;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,12 +29,21 @@ public class Jvm_Test {
      * -XX:+PrintGCApplicationStoppedTime
      * -XX:+PrintCommonLineFlags
      * -XX:+PrintFlagFinal
+     * -XX:+UseConcMarkSweepGC
      * @param args
      */
     public static void main(String[] args){
+
+        List<GarbageCollectorMXBean> beans = ManagementFactory.getGarbageCollectorMXBeans();
+        for (GarbageCollectorMXBean bean : beans) {
+            System.out.println(bean.getName());
+        }
+
+
         List<Integer> integerList = new ArrayList<>();
         while (true) {
             integerList.add(new Integer(1));
+            System.out.println(integerList.size());
         }
       //  Method();
 

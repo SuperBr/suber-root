@@ -526,7 +526,3 @@ Full GC触发条件：
 
 （5）由Eden区、From Space区向To Space区复制时，对象大小大于To Space可用内存，则把该对象转存到老年代，且老年代的可用内存小于该对象大小
 ---------------------
-作者：逸辰杳
-来源：CSDN
-原文：https://blog.csdn.net/yhyr_ycy/article/details/52566105
-版权声明：本文为博主原创文章，转载请附上博文链接！
